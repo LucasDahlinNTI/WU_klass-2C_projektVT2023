@@ -14,7 +14,7 @@ body {
 #grid_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:50px 3000px 720px 100px;
+    grid-template-rows:100px 3000px 720px 100px;
     grid-template-areas: 
     "he he he he he"
     "ma ma ma ma ma"
@@ -24,13 +24,19 @@ body {
 
 header{
     grid-area: he;
-    background-color: aqua;
+    background: rgb(77,77,77);
+    background: linear-gradient(0deg, rgba(77,77,77,1) 0%, rgba(94,94,94,1) 29%, rgba(184,184,184,1) 100%);
     display: flex;
+    color: whitesmoke;
+    align-items: center;
+    padding-left: 20px;
 }
+
 
 nav {
     grid-area: na;
-    background-color: blueviolet;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 25%, rgba(255,255,255,1) 25%);
     display: flex;
     overflow: hidden;
     position: fixed;
@@ -38,14 +44,14 @@ nav {
     box-shadow: 0 -2px 5px -2px #333;
     height: 100px;
     width: 100%;  
-    justify-content: space-evenly; 
+    justify-content: space-around; 
     align-items: center;
     flex-direction: row;
 }
 
 main {
     grid-area: ma;
-    background-color: gold;
+    background-color: white;
     display: flex;
 }
 
@@ -64,3 +70,19 @@ section {
     height: 50px;
     width: auto;
 }
+
+#info {
+    height: 50px;
+    width: auto;
+}
+
+#key_chain {
+    height: 50px;
+    width: auto;
+}
+
+#ski {
+    height: 50px;
+    width: auto;
+}
+
