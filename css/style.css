@@ -14,7 +14,7 @@ body {
 #grid_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:200px 3000px 720px 100px;
+    grid-template-rows:150px 1080px 300px 100px;
     grid-template-areas: 
     "he he he he he"
     "ma ma ma ma ma"
@@ -27,10 +27,9 @@ body {
 header{
     grid-area: he;
     display: flex;
-    color: whitesmoke;
+    color: white;
     align-items: center;
     justify-content: left;
-    align-items: center;
 }
 
 
@@ -52,13 +51,22 @@ nav {
 
 main {
     grid-area: ma;
-    background-color: white;
-    display: flex;
+    display: border-box;
+    grid-template-areas: 
+    "bo"
+    "co";
+    background-image: url("../img/ski_bak.jpg");
+    z-index: -20;
+    overflow: hidden;
+    background-position: 1000px, center;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 footer {
     grid-area: fo;
-    background-color: palegreen;
+    background-color: rgb(139, 139, 139);
     display: flex;
 }
 
@@ -88,6 +96,16 @@ section {
 }
 
 #logga {
-    height: 200px;
+    height: 150px;
     width: auto;
+}
+
+#border { 
+    grid-area: bo;
+    position: relative;
+    top: -120px;
+}
+
+#container {
+    grid-area: co;
 }
