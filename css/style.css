@@ -146,33 +146,49 @@ p {
 
 #container_key {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
+    "li" 
     "vi"
     "ho"
     "ca";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1vh 1vh 1vh;
+    grid-template-columns: 270px;
+    grid-template-rows: 50px 270px 270px 270px;
 }
 
 #village {
     grid-area: vi;
-    /* background-image: url("../img/village.jpg"); */
-    background-color: red;
-    
+    background-image: url("../img/village.jpg"); 
 }
 
 #cabin {
     grid-area: ca;
-    /* background-image: url("../img/cabin.jpg"); */
-    background-color: orange;
+    background-image: url("../img/cabin.jpg");
+    background-position: -40px;
 }
 
 #hotell {
     grid-area: ho;
-    /* background-image: url("../img/hotell.jpg"); */
-    background-color: pink;
+    background-image: url("../img/hotell.jpg");
+    background-position: -47px;
 }
 
-.bilder_key {
+.bild_key {
     background-size: cover;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 9px -2px #333;
+}
+
+h3 { 
+    background-color: white;
+    font-size: x-large;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+#headline{
+    grid-area: li;
+    padding-left: 8px;
+    
 }
