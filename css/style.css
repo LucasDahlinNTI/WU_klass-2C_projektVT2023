@@ -5,190 +5,640 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: xx-large;   
 }
- 
-body {
-    justify-content: center;
-    align-items: center;
+
+ @media screen and (max-width: 700px){
+
+    #grid_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:150px 1080px 300px 100px;
+        grid-template-areas: 
+        "he"
+        "ma"
+        "fo"
+        "na";
+    }
+
+    header{
+        grid-area: he;
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: left;
+    }
+
+
+    nav {
+        grid-area: na;
+        background: rgb(255,0,0);
+        background: linear-gradient(90deg, rgba(255,0,0,1) 25%, rgba(255,255,255,1) 25%);
+        display: flex;
+        overflow: hidden;
+        position: fixed;
+        bottom:0;
+        box-shadow: 0 -2px 5px -2px #333;
+        height: 100px;
+        width: 100%;  
+        justify-content: space-around; 
+        align-items: center;
+        flex-direction: row;
+    }
+
+    main {
+        grid-area: ma;
+        display: grid;
+        grid-template-areas: 
+        "bo"
+        "co";
+        grid-template-rows: 10px 1fr;
+        grid-template-columns: 1fr;
+        z-index: -20;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #main_start {
+        background-image: url("../img/ski_bak.jpg");
+        background-position: 750px, center;
+    }
+
+    footer {
+        display: flex;
+        grid-area: fo;
+        background-color: rgb(139, 139, 139);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #weather {
+        height: 70px;
+        width: auto;
+    }
+
+    #info {
+        height: 70px;
+        width: auto;
+    }
+
+    #key_chain {
+        height: 70px;
+        width: auto;
+    }
+
+    #ski {
+        height: 70px;
+        width: auto;
+    }
+
+    #logga {
+        height: 150px;
+        width: auto;
+    }
+
+    #border { 
+        grid-area: bo;
+        position: relative;
+    }
+
+    #container {
+        display: flex;
+        grid-area: co;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-style: italic;
+        opacity: 0.7;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: white; 
+    }
+
+    #p_footer {
+        padding-left: 13%;
+        font-weight: lighter;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+
+    #main_key {
+        background-image: url("../img/mountain.jpg");
+        background-position: 1240px, center;
+    }
+
+    #container_key {
+        display: grid;
+        grid-template-areas:
+        "li" 
+        "vi"
+        "ho"
+        "ca";
+        grid-template-columns: 270px;
+        grid-template-rows: 50px 270px 270px 270px;
+    }
+
+    #village {
+        grid-area: vi;
+        background-image: url("../img/village.jpg"); 
+    }
+
+    #cabin {
+        grid-area: ca;
+        background-image: url("../img/cabin.jpg");
+        background-position: -40px;
+    }
+
+    #hotell {
+        grid-area: ho;
+        background-image: url("../img/hotell.jpg");
+        background-position: -47px;
+    }
+
+    .bild_key {
+        background-size: cover;
+        margin: 10px;
+        border-radius: 30px;
+        box-shadow: 5px 5px 9px -2px #333;
+    }
+
+    h3 { 
+        background-color: white;
+        font-size: x-large;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 10px;
+    }
+
+    #headline{
+        grid-area: li;
+        padding-left: 8px; 
+    }
+
+    #main_weather{
+        background-image: url("../img/karsten-winegeart-L7289nHzVgI-unsplash.jpg");
+        background-position: -885px, center;
+    }
+
+    #container_weather{
+        display: grid;
+        grid-template-areas: 
+        "ic"
+        "te"
+        "if"
+        "sl";
+        grid-template-columns: 280px;
+        grid-template-rows: 100px 35px 150px 150px;
+        background-color: rgb(255, 255, 255, 0.7);
+        border-radius: 20px;
+        box-shadow:5px 5px 9px -2px #333 ;
+    }
+
+    #icons{
+        grid-area: ic;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #temp{
+        grid-area: te;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #temp_desk{
+        display: none;
+    }
+
+    #lift{
+        grid-area: if;
+    }
+
+    #slopes{
+        grid-area: sl;
+    }
+
+
+
+    .weather_icon{
+        width: 100px;
+        height: auto;
+    }
+
+    #lift_bild{
+        height: 110px;
+        width: auto;
+        padding-top: 30px;
+    }
+
+    #slopes_bild{
+        height: 110px;
+        width: auto;
+        padding-top: 30px;
+    }
+
+    h5{ 
+        padding-left: 200px;
+        padding-top: 50px;
+        font-family: lucida;
+    }
+
+    #main_ski{
+        background-image: url("../img/hendrik-morkel-BLKZfjRaa6Y-unsplash.jpg");
+        background-position: -600px ;
+        background-size: 1550px 1200px;
+    }
+
+    #container_ski{
+        display: grid;
+        grid-template-areas: 
+        "ti"
+        "ma";
+        grid-template-columns: 350px;
+        grid-template-rows: 40px 350px;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+
+    #map{
+        grid-area: ma;  
+    }
+
+    #title_ski{
+        grid-area: ti;
+        border-bottom: 2px solid black;
+    }
+
+    #ski_h6{
+        text-align: center;
+    }
+
+    #map_h6{
+        padding-top: 130px;
+        padding-left: 110px;
+        transform: rotate(45deg);
+    }
+
+    h6{
+        font-family: times;
+        font-size: 40px;
+    }
+
+    #link_list {
+        display: none;
+    }
+
+    #burger{
+        display: none;
+    }
 }
-
-#grid_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:150px 1080px 300px 100px;
-    grid-template-areas: 
-    "he he he he he"
-    "ma ma ma ma ma"
-    "fo fo fo fo fo"
-    "na na na na na";
-}
-
-header{
-    grid-area: he;
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: left;
-}
-
-
-nav {
-    grid-area: na;
-    background: rgb(255,0,0);
-    background: linear-gradient(90deg, rgba(255,0,0,1) 25%, rgba(255,255,255,1) 25%);
-    display: flex;
-    overflow: hidden;
-    position: fixed;
-    bottom:0;
-    box-shadow: 0 -2px 5px -2px #333;
-    height: 100px;
-    width: 100%;  
-    justify-content: space-around; 
-    align-items: center;
-    flex-direction: row;
-}
-
-main {
-    grid-area: ma;
-    display: grid;
-    grid-template-areas: 
-    "bo"
-    "co";
-    grid-template-rows: 10px 1fr;
-    grid-template-columns: 1fr;
-    z-index: -20;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center; 
-}
-
-#main_start {
-    background-image: url("../img/ski_bak.jpg");
-    background-position: 750px, center;
-}
-
-footer {
-    display: flex;
-    grid-area: fo;
-    background-color: rgb(139, 139, 139);
-    display: flex;
-}
-
-section {
-    justify-content: center;
-    align-items: center;
-}
-
-#weather {
-    height: 70px;
-    width: auto;
-}
-
-#info {
-    height: 70px;
-    width: auto;
-}
-
-#key_chain {
-    height: 70px;
-    width: auto;
-}
-
-#ski {
-    height: 70px;
-    width: auto;
-}
-
-#logga {
-    height: 150px;
-    width: auto;
-}
-
-#border { 
-    grid-area: bo;
-    position: relative;
-}
-
-#container {
-    display: flex;
-    grid-area: co;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 40px;
-    font-style: italic;
-    opacity: 0.7;
-}
-
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h2 {
-    font-size: 24px;
-    color: white; 
-}
-
-p {
-    padding-left: 13%;
-    font-weight: lighter;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-#main_key {
-    background-image: url("../img/mountain.jpg");
-    background-position: 1240px, center;
-}
-
-#container_key {
-    display: grid;
-    grid-template-areas:
-    "li" 
-    "vi"
-    "ho"
-    "ca";
-    grid-template-columns: 270px;
-    grid-template-rows: 50px 270px 270px 270px;
-}
-
-#village {
-    grid-area: vi;
-    background-image: url("../img/village.jpg"); 
-}
-
-#cabin {
-    grid-area: ca;
-    background-image: url("../img/cabin.jpg");
-    background-position: -40px;
-}
-
-#hotell {
-    grid-area: ho;
-    background-image: url("../img/hotell.jpg");
-    background-position: -47px;
-}
-
-.bild_key {
-    background-size: cover;
-    margin: 10px;
-    border-radius: 30px;
-    box-shadow: 5px 5px 9px -2px #333;
-}
-
-h3 { 
-    background-color: white;
-    font-size: x-large;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px;
-}
-
-#headline{
-    grid-area: li;
-    padding-left: 8px;
     
+body::-webkit-scrollbar{
+    display: none;
 }
+
+
+@media screen and (min-width: 700px){
+
+    #grid_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:150px 1080px 300px;
+        grid-template-areas: 
+        "he he he he na"
+        "ma ma ma ma ma"
+        "fo fo fo fo fo";
+    }
+
+    header{
+        grid-area: he;
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: left;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: white;
+        grid-area: na;
+    }
+
+    #link_list {
+        background-color: rgb(0, 0, 0, 0.7) ;
+        height: 400px;
+        width: 200px;
+        position: absolute;
+        top: -400px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        transition: all 0.5s;
+        }
+
+        #link_list a {
+            text-decoration: none;  
+            letter-spacing: 0.187rem;
+            color: white;
+            font-weight: bold;
+            font-family: lucida;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+        
+
+        #burger div {
+            width: 50px;
+            height: 6px;
+            background-color: black;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        #burger {
+            margin-right: 50px;
+            cursor: pointer;
+        }
+        
+        .link_list_visible {
+            transform: translateY(550px);
+        }
+        
+        .cross #burger_line_2 {
+            opacity: 0;
+        }
+        
+        .cross #burger_line_1 {
+            transform: rotate(-45deg) translate(-16px, 6px);
+        }
+        
+        .cross #burger_line_3 {
+            transform: rotate(45deg) translate(-16px, -6px);
+        } 
+
+    main {
+        grid-area: ma;
+        display: grid;
+        grid-template-areas: 
+        "bo"
+        "co";
+        grid-template-rows: 10px 1fr;
+        grid-template-columns: 1fr;
+        z-index: -20;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    footer {
+        display: flex;
+        grid-area: fo;
+        background-color: rgb(139, 139, 139);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #weather {
+       display: none;
+    }
+
+    #info {
+        display: none;
+    }
+
+    #key_chain {
+        display: none;
+    }
+
+    #ski {
+        display: none;
+    }
+
+    #main_start {
+        background-image: url("../img/ski_bak.jpg");
+        background-position: center;
+    }
+
+    #logga {
+        height: 150px;
+        width: auto;
+    }
+
+    #border { 
+        grid-area: bo;
+        position: relative;
+    }
+
+    #container {
+        display: flex;
+        grid-area: co;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 80px;
+        font-style: italic;
+        opacity: 0.7;
+        padding-right: 300px;
+    }
+
+    h2 {
+        font-size: 40px;
+        color: white; 
+    }
+
+    #p_footer {
+        padding-left: 13%;
+        font-weight: lighter;
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+    }
+
+    #main_key {
+        background-image: url("../img/mountain.jpg");
+        background-position: center;
+    }
+
+    #container_key {
+        display: grid;
+        grid-template-areas:
+        "li li li" 
+        "vi ho ca";
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 200px 400px;
+    }
+
+    #village {
+        grid-area: vi;
+        background-image: url("../img/village.jpg"); 
+    }
+
+    #cabin {
+        grid-area: ca;
+        background-image: url("../img/cabin.jpg");
+        background-position: -40px;
+    }
+
+    #hotell {
+        grid-area: ho;
+        background-image: url("../img/hotell.jpg");
+        background-position: -70px;
+    }
+
+    .bild_key {
+        background-size: cover;
+        margin: 10px;
+        border-radius: 30px;
+        box-shadow: 5px 5px 9px -2px #333;
+    }
+
+    h3 { 
+        background-color: white;
+        font-size: x-large;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 10px;
+    }
+
+    #headline{
+        grid-area: li;
+        text-align: center;
+    }
+
+    h4{
+        font-size: 100px;
+    }
+
+    #main_weather{
+        background-image: url("../img/karsten-winegeart-L7289nHzVgI-unsplash.jpg");
+        background-position: center;
+    }
+
+    #container_weather{
+        display: grid;
+        grid-template-areas: 
+        "ic"
+        "te"
+        "if"
+        "sl";
+        grid-template-columns: 670px;
+        grid-template-rows: 300px 100px 200px 200px;
+        background-color: rgb(255, 255, 255, 0.7);
+        border-radius: 20px;
+        box-shadow:5px 5px 9px -2px #333 ;
+    }
+
+    #icons{
+        grid-area: ic;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #temp{
+        display: none;
+    }
+
+    #temp_desk{
+        grid-area: te;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #lift{
+        grid-area: if;
+    }
+
+    #slopes{
+        grid-area: sl;
+    }
+
+    .weather_icon{
+        width: 300px;
+        height: auto;
+    }
+
+    #lift_bild{
+        height: 150px;
+        width: auto;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+
+    #slopes_bild{
+        height: 110px;
+        width: auto;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+
+    h5{ 
+        padding-left: 500px;
+        padding-top: 50px;
+        font-family: lucida;
+    }
+
+    #main_ski{
+        background-image: url("../img/hendrik-morkel-BLKZfjRaa6Y-unsplash.jpg");
+        background-position: center;
+    }
+
+    #container_ski{
+        display: grid;
+        grid-template-areas: 
+        "ti"
+        "ma";
+        grid-template-columns: 700px;
+        grid-template-rows: 100px 600px;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+
+    #map{
+        grid-area: ma;  
+    }
+
+    #title_ski{
+        grid-area: ti;
+        border-bottom: 2px solid black;
+    }
+
+    #ski_h6{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 70px;
+    }
+
+    #map_h6{
+        padding-top: 220px;
+        padding-left: 270px;
+        transform: rotate(45deg);
+        font-size: 60px;
+    }
+
+    h6{
+        font-family: times;
+        font-size: 40px;
+    }
+
+
+
+}
+
+
+
+

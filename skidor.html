@@ -1,7 +1,3 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-    </style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,39 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpes Des Pêcheurs Volants</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>  
     <div id="grid_wrapper">
-        <header><img src="img/logga webbutveckling 2.png" alt="logga" id="logga"></header>
+        <header><img src="img/loggawebbutveckling2.png" alt="logga" id="logga"></header>
         <nav>  
-            <section id="sec_1"><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
-            <section id="sec_2"><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
-            <section id="sec_3"><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
-            <section id="sec_4"><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
+            <section><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
+            <section><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
+            <section><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
+            <section><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
+
+            <ul id="link_list">
+                <li><a href="./index.html">Start</a></li>
+                <li><a href="./weather.html">Väder</a></li>
+                <li><a href="./boende.html">Boende</a></li>
+                <li><a href="./skidor.html">Skidor</a></li>
+            </ul>
+
+            <div id="burger">
+                <div id="burger_line_1"></div>
+                <div id="burger_line_2"></div>
+                <div id="burger_line_3"></div>
+            </div>   
+
         </nav>
-        <main> 
+        <main id="main_ski"> 
             <section id="border"><img src="img/border.png" alt="border">
             </section>
             <div id="container">
-                <h1>
-                    Home Of The Ski
-                </h1>
+                    <div id="container_ski">
+                        <section id="title_ski"><h6 id="ski_h6">Pistkarta</h6></section>
+                        <section id="map"><h6 id="map_h6">Coming Soon</h6></section>
+                    </div>
             </div>
         </main> 
         <footer>
             <article>
                     <h2>
                         Alpes Des Pêcheurs Volants
-                    <h2>
+                    </h2>
                     <br>
-                        <p>
-                            Adress: Trallbanevägen 25<br>
-                            Telefon: +46 72-3200551
-                        </p>
+                    <p id="p_footer">
+                        Adress: Trallbanevägen 25<br>
+                        Telefon: 723200551
+                    </p>
             </article>
         </footer>
     </div>
-
+  <script src="./js/app.js"></script>
 </body>
 </html>
