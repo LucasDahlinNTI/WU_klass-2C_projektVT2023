@@ -7,57 +7,55 @@
     <title>Alpes Des Pêcheurs Volants</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>  
-    <div id="grid_wrapper">
-        <header><img src="img/loggawebbutveckling2.png" alt="logga" id="logga"></header>
-        <nav>  
-            <section><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
-            <section><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
-            <section><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
-            <section><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
+<body id="grid_wrapper">  
+    <header><img src="img/loggawebbutveckling2.png" alt="logga" id="logga"></header>
+    <nav>  
+        <section><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
+        <section><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
+        <section><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
+        <section><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
 
-            <ul id="link_list">
-                <li><a href="./index.html">Start</a></li>
-                <li><a href="./weather.html">Väder</a></li>
-                <li><a href="./boende.html">Boende</a></li>
-                <li><a href="./skidor.html">Skidor</a></li>
-            </ul>
+        <ul id="link_list">
+            <li><a href="./index.html">Start</a></li>
+            <li><a href="./weather.html">Väder</a></li>
+            <li><a href="./boende.html">Boende</a></li>
+            <li><a href="./skidor.html">Skidor</a></li>
+        </ul>
 
-            <div id="burger">
-                <div id="burger_line_1"></div>
-                <div id="burger_line_2"></div>
-                <div id="burger_line_3"></div>
-            </div>   
-        </nav>
-        <main id="main_weather"> 
-            <section id="border"><img src="img/border.png" alt="border">
+        <div id="burger">
+            <div id="burger_line_1"></div>
+            <div id="burger_line_2"></div>
+            <div id="burger_line_3"></div>
+        </div>   
+    </nav>
+    <main id="main_weather"> 
+        <section id="border"><img src="img/border.png" alt="border">
+        </section>
+        <article id="container">
+            <section id="container_weather">
+                <section id="icons"> &nbsp<img src="img/sun.webp" alt="sol" class="weather_icon"> &nbsp&nbsp&nbsp <img src="img/snowflake.webp" alt="snö" class="weather_icon" id="snö">
+                </section>
+                <section><p id="temp" >&nbsp -2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 100cm</p> <p id="temp_desk">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 100cm</p>
+                </section>
+                <section id="lift"><img src="img/cablecart.png" alt="cabble" id="lift_bild" style="float: left;"><p class="p_lift_slopes">49/53</p>
+                </section>
+                <section id="slopes"><img src="img/skiing.webp" alt="slopes" id="slopes_bild" style="float:left"> <p class="p_lift_slopes">38/41</p>
+                </section>
             </section>
-            <div id="container">
-                <div id="container_weather">
-                    <section id="icons"> &nbsp<img src="img/sun.webp" alt="sol" class="weather_icon"> &nbsp&nbsp&nbsp <img src="img/snowflake.webp" alt="snö" class="weather_icon" id="snö">
-                    </section>
-                    <section><p id="temp" >&nbsp -2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 100cm</p> <p id="temp_desk">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -2 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 100cm</p>
-                    </section>
-                    <section id="lift"><img src="img/cablecart.png" alt="cabble" id="lift_bild" style="float: left;"><h5>49/53</h5>
-                    </section>
-                    <section id="slopes"><img src="img/skiing.webp" alt="slopes" id="slopes_bild" style="float:left"> <h5>38/41</h5>
-                    </section>
-                </div>
-            </div>
-        </main> 
-        <footer>
-            <article>
-                    <h2>
-                        Alpes Des Pêcheurs Volants
-                    </h2>
-                    <br>
-                    <p id="p_footer">
-                        Adress: Trallbanevägen 25<br>
-                        Telefon: 723200551
-                    </p>
-            </article>
-        </footer>
-    </div>
+        </article>
+    </main> 
+    <footer>
+        <article>
+                <h2 id="h2_footer">
+                    Alpes Des Pêcheurs Volants
+                </h2>
+                <br>
+                <p id="p_footer">
+                    Adress: Trallbanevägen 25<br>
+                    Telefon: 723200551
+                </p>
+        </article>
+    </footer>
     <script src="./js/app.js"></script>
 </body>
 </html>

@@ -110,13 +110,13 @@
         justify-content: center;
     }
 
-    h1 {
+    #h1_start {
         font-size: 40px;
         font-style: italic;
         opacity: 0.7;
     }
 
-    h2 {
+    #h2_footer {
         font-size: 24px;
         color: white; 
     }
@@ -169,7 +169,7 @@
         box-shadow: 5px 5px 9px -2px #333;
     }
 
-    h3 { 
+    .h2_boende { 
         background-color: white;
         font-size: x-large;
         font-style: italic;
@@ -243,7 +243,7 @@
         padding-top: 30px;
     }
 
-    h5{ 
+    .p_lift_slopes{ 
         padding-left: 200px;
         padding-top: 50px;
         font-family: lucida;
@@ -259,7 +259,7 @@
         display: grid;
         grid-template-areas: 
         "ti"
-        "ma";
+        "ap";
         grid-template-columns: 350px;
         grid-template-rows: 40px 350px;
         background-color: white;
@@ -268,7 +268,10 @@
     }
 
     #map{
-        grid-area: ma;  
+        grid-area: ap;  
+        height: 100%;
+        width: 100%;
+        z-index: +10;
     }
 
     #title_ski{
@@ -276,19 +279,11 @@
         border-bottom: 2px solid black;
     }
 
-    #ski_h6{
-        text-align: center;
-    }
 
-    #map_h6{
-        padding-top: 130px;
-        padding-left: 110px;
-        transform: rotate(45deg);
-    }
-
-    h6{
+    #ski_h1{
         font-family: times;
         font-size: 40px;
+        text-align: center;
     }
 
     #link_list {
@@ -449,14 +444,14 @@ body::-webkit-scrollbar{
         justify-content: center;
     }
 
-    h1 {
+    #h1_start {
         font-size: 80px;
         font-style: italic;
         opacity: 0.7;
         padding-right: 300px;
     }
 
-    h2 {
+    #h2_footer {
         font-size: 40px;
         color: white; 
     }
@@ -507,7 +502,7 @@ body::-webkit-scrollbar{
         box-shadow: 5px 5px 9px -2px #333;
     }
 
-    h3 { 
+    .h2_boende { 
         background-color: white;
         font-size: x-large;
         font-style: italic;
@@ -520,7 +515,7 @@ body::-webkit-scrollbar{
         text-align: center;
     }
 
-    h4{
+    #h1_boende{
         font-size: 100px;
     }
 
@@ -585,7 +580,7 @@ body::-webkit-scrollbar{
         padding-left: 50px;
     }
 
-    h5{ 
+    .p_lift_slopes{ 
         padding-left: 500px;
         padding-top: 50px;
         font-family: lucida;
@@ -600,7 +595,7 @@ body::-webkit-scrollbar{
         display: grid;
         grid-template-areas: 
         "ti"
-        "ma";
+        "ap";
         grid-template-columns: 700px;
         grid-template-rows: 100px 600px;
         background-color: white;
@@ -609,7 +604,9 @@ body::-webkit-scrollbar{
     }
 
     #map{
-        grid-area: ma;  
+        grid-area: ap;
+        height: 100%;  
+        width: 100%;
     }
 
     #title_ski{
@@ -617,26 +614,12 @@ body::-webkit-scrollbar{
         border-bottom: 2px solid black;
     }
 
-    #ski_h6{
+    #ski_h1{
         text-align: center;
         padding-top: 20px;
         font-size: 70px;
-    }
-
-    #map_h6{
-        padding-top: 220px;
-        padding-left: 270px;
-        transform: rotate(45deg);
-        font-size: 60px;
-    }
-
-    h6{
         font-family: times;
-        font-size: 40px;
     }
-
-
-
 }
 
 

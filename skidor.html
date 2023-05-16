@@ -7,52 +7,50 @@
     <title>Alpes Des Pêcheurs Volants</title>
     <link rel="stylesheet" href="css/style.css">  
 </head>
-<body>  
-    <div id="grid_wrapper">
-        <header><img src="img/loggawebbutveckling2.png" alt="logga" id="logga"></header>
-        <nav>  
-            <section><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
-            <section><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
-            <section><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
-            <section><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
+<body id="grid_wrapper">  
+    <header><img src="img/loggawebbutveckling2.png" alt="logga" id="logga"></header>
+    <nav>  
+        <section><a href="index.html"><img src="/img/information.png" alt="info" id="info"></a></section>
+        <section><a href="weather.html"><img src="/img/rain.png" alt="rain" id="weather"></a></section>
+        <section><a href="boende.html"><img src="/img/key-chain.png" alt="key_chain" id="key_chain"></a></section>
+        <section><a href="skidor.html"><img src="/img/ski.png" alt="ski" id="ski"></a></section>
 
-            <ul id="link_list">
-                <li><a href="./index.html">Start</a></li>
-                <li><a href="./weather.html">Väder</a></li>
-                <li><a href="./boende.html">Boende</a></li>
-                <li><a href="./skidor.html">Skidor</a></li>
-            </ul>
+        <ul id="link_list">
+            <li><a href="./index.html">Start</a></li>
+            <li><a href="./weather.html">Väder</a></li>
+            <li><a href="./boende.html">Boende</a></li>
+            <li><a href="./skidor.html">Skidor</a></li>
+        </ul>
 
-            <div id="burger">
-                <div id="burger_line_1"></div>
-                <div id="burger_line_2"></div>
-                <div id="burger_line_3"></div>
-            </div>   
+        <div id="burger">
+            <div id="burger_line_1"></div>
+            <div id="burger_line_2"></div>
+            <div id="burger_line_3"></div>
+        </div>   
 
-        </nav>
-        <main id="main_ski"> 
-            <section id="border"><img src="img/border.png" alt="border">
-            </section>
-            <div id="container">
-                    <div id="container_ski">
-                        <section id="title_ski"><h6 id="ski_h6">Pistkarta</h6></section>
-                        <section id="map"><h6 id="map_h6">Coming Soon</h6></section>
-                    </div>
-            </div>
-        </main> 
-        <footer>
-            <article>
-                    <h2>
-                        Alpes Des Pêcheurs Volants
-                    </h2>
-                    <br>
-                    <p id="p_footer">
-                        Adress: Trallbanevägen 25<br>
-                        Telefon: 723200551
-                    </p>
-            </article>
-        </footer>
-    </div>
-  <script src="./js/app.js"></script>
+    </nav>
+    <main id="main_ski"> 
+        <section id="border"><img src="img/border.png" alt="border">
+        </section>
+        <article id="container">
+                <section id="container_ski">
+                    <section id="title_ski"><h1 id="ski_h1">Pistkarta</h1></section>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89610.00113110349!2d6.932705424606809!3d45.423200826280834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47890909fd5ffb93%3A0x408ab2ae4baa830!2s73150%20Val-d&#39;Is%C3%A8re%2C%20Frankrike!5e0!3m2!1ssv!2sse!4v1684240782782!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+                </section>
+        </article>
+    </main> 
+    <footer>
+        <article>
+                <h2 id="h2_footer">
+                    Alpes Des Pêcheurs Volants
+                </h2>
+                <br>
+                <p id="p_footer">
+                    Adress: Trallbanevägen 25<br>
+                    Telefon: 723200551
+                </p>
+        </article>
+    </footer>
+<script src="./js/app.js"></script>
 </body>
 </html>
