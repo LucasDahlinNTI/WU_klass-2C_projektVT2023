@@ -52,7 +52,6 @@
         "co";
         grid-template-rows: 10px 1fr;
         grid-template-columns: 1fr;
-        z-index: -20;
         overflow: hidden;
         justify-content: center;
         align-items: center; 
@@ -60,9 +59,33 @@
 
     #main_start {
         background-image: url("../img/ski_bak.jpg");
-        background-position: 750px, center;
+        background-position: -1050px;
+        grid-template-areas: 
+        "bo"
+        "c2";
+        grid-template-rows: 10px 1fr;
+        grid-template-columns: 1fr;
     }
 
+    #container2{
+        grid-area: c2;
+        padding-left: 770px;
+        padding-bottom: 400px;
+    }
+
+    #youtube{
+       grid-area: yu;
+    }
+
+    #youtube_text{
+        background-color: red;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        text-underline-offset: 5px;
+    }
     footer {
         display: flex;
         grid-area: fo;
@@ -177,6 +200,10 @@
         padding: 10px;
     }
 
+    .boende_text{
+        display: none;
+    }
+
     #headline{
         grid-area: li;
         padding-left: 8px; 
@@ -190,30 +217,44 @@
     #container_weather{
         display: grid;
         grid-template-areas: 
-        "ic"
-        "te"
-        "if"
-        "sl";
-        grid-template-columns: 280px;
-        grid-template-rows: 100px 35px 150px 150px;
+        "su sn"
+        "t1 t2"
+        "if nu"
+        "sl op";
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 100px 50px 150px 110px;
         background-color: rgb(255, 255, 255, 0.7);
         border-radius: 20px;
         box-shadow:5px 5px 9px -2px #333 ;
     }
 
-    #icons{
-        grid-area: ic;
+    #su{
+        grid-area: su;
         justify-content: center;
         align-items: center;
+        padding-left: 20px;
+        padding-top: 10px;
     }
 
-    #temp{
-        grid-area: te;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+    #sn{
+        grid-area: sn;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-top: 10px;
     }
 
-    #temp_desk{
-        display: none;
+    #t1{
+        grid-area: t1;
+        padding-left: 50px;
+        padding-top: 20px;
+    }
+
+    #t2{
+        grid-area: t2;
+        padding-left: 30px;
+        padding-top: 20px;
+
     }
 
     #lift{
@@ -222,6 +263,36 @@
 
     #slopes{
         grid-area: sl;
+    }
+
+
+    #lift_bild{
+        height: 150px;
+        width: auto;
+        padding-top: 30px;
+        padding-left: 25px;
+    }
+
+    #slopes_bild{
+        height: 110px;
+        width: auto;
+        padding-left: 25px;
+    }   
+
+    #nu{ 
+        grid-area: nu;
+        padding-left: 35px;
+        padding-top: 50px;
+    }
+
+    #op{ 
+        grid-area: op;
+        padding-left: 35px;
+        padding-top: 30px;
+    }
+
+    .text_weather{
+        font-family: georgia;
     }
 
 
@@ -243,12 +314,6 @@
         padding-top: 30px;
     }
 
-    .p_lift_slopes{ 
-        padding-left: 200px;
-        padding-top: 50px;
-        font-family: lucida;
-    }
-
     #main_ski{
         background-image: url("../img/hendrik-morkel-BLKZfjRaa6Y-unsplash.jpg");
         background-position: -600px ;
@@ -267,11 +332,12 @@
         border: 2px solid black;
     }
 
-    #map{
+    #map2{
         grid-area: ap;  
-        height: 100%;
-        width: 100%;
-        z-index: +10;
+    }
+
+    #map{
+        display: none;
     }
 
     #title_ski{
@@ -341,6 +407,7 @@ body::-webkit-scrollbar{
         justify-content: space-around;
         list-style: none;
         transition: all 0.5s;
+        z-index: +2;
         }
 
         #link_list a {
@@ -391,11 +458,12 @@ body::-webkit-scrollbar{
         "co";
         grid-template-rows: 10px 1fr;
         grid-template-columns: 1fr;
-        z-index: -20;
         overflow: hidden;
         justify-content: center;
         align-items: center; 
     }
+
+   
 
     footer {
         display: flex;
@@ -425,6 +493,30 @@ body::-webkit-scrollbar{
     #main_start {
         background-image: url("../img/ski_bak.jpg");
         background-position: center;
+        grid-template-areas: 
+        "bo"
+        "c2";
+        grid-template-rows: 10px 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #container2{
+        grid-area: c2;
+        padding-left: 400px;
+    }
+
+    #youtube{
+       grid-area: yu;
+    }
+
+    #youtube_text{
+        background-color: red;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        text-underline-offset: 5px;
     }
 
     #logga {
@@ -445,6 +537,7 @@ body::-webkit-scrollbar{
     }
 
     #h1_start {
+        grid-area: h1;
         font-size: 80px;
         font-style: italic;
         opacity: 0.7;
@@ -481,18 +574,48 @@ body::-webkit-scrollbar{
     #village {
         grid-area: vi;
         background-image: url("../img/village.jpg"); 
+        color: transparent;
+        transition: 1000ms;
+        
     }
+
+    #village:hover{
+        color: black;
+        cursor: pointer;
+    }
+
 
     #cabin {
         grid-area: ca;
         background-image: url("../img/cabin.jpg");
         background-position: -40px;
+        color: transparent;
+        transition: 1000ms;
+    }
+
+    #cabin:hover{
+        color: black;
+        cursor: pointer;
     }
 
     #hotell {
         grid-area: ho;
         background-image: url("../img/hotell.jpg");
         background-position: -70px;
+        color: transparent;
+        transition: 1000ms;
+    }
+
+    #hotell:hover{
+        color: black;
+        cursor: pointer;
+    }
+
+    .boende_text{
+        position: relative;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-top: 330px; 
+        font-weight: 800;
     }
 
     .bild_key {
@@ -508,6 +631,7 @@ body::-webkit-scrollbar{
         font-style: italic;
         font-family: Georgia, 'Times New Roman', Times, serif;
         padding: 10px;
+        color: black;
     }
 
     #headline{
@@ -527,19 +651,25 @@ body::-webkit-scrollbar{
     #container_weather{
         display: grid;
         grid-template-areas: 
-        "ic"
-        "te"
-        "if"
-        "sl";
-        grid-template-columns: 670px;
+        "su sn"
+        "t1 t2"
+        "if nu"
+        "sl op";
+        grid-template-columns: 335px 335px;
         grid-template-rows: 300px 100px 200px 200px;
         background-color: rgb(255, 255, 255, 0.7);
         border-radius: 20px;
         box-shadow:5px 5px 9px -2px #333 ;
     }
 
-    #icons{
-        grid-area: ic;
+    #su{
+        grid-area: su;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sn{
+        grid-area: sn;
         justify-content: center;
         align-items: center;
     }
@@ -548,9 +678,17 @@ body::-webkit-scrollbar{
         display: none;
     }
 
-    #temp_desk{
-        grid-area: te;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+    #t1{
+        grid-area: t1;
+        padding-left: 90px;
+        padding-top: 20px;
+    }
+
+    #t2{
+        grid-area: t2;
+        padding-left: 120px;
+        padding-top: 20px;
+
     }
 
     #lift{
@@ -578,12 +716,22 @@ body::-webkit-scrollbar{
         width: auto;
         padding-top: 30px;
         padding-left: 50px;
+    }   
+
+    #nu{ 
+        grid-area: nu;
+        padding-left: 120px;
+        padding-top: 50px;
     }
 
-    .p_lift_slopes{ 
-        padding-left: 500px;
+    #op{ 
+        grid-area: op;
+        padding-left: 120px;
         padding-top: 50px;
-        font-family: lucida;
+    }
+
+    .text_weather{
+        font-family: georgia;
     }
 
     #main_ski{
@@ -601,12 +749,15 @@ body::-webkit-scrollbar{
         background-color: white;
         border-radius: 5px;
         border: 2px solid black;
+
     }
 
     #map{
-        grid-area: ap;
-        height: 100%;  
-        width: 100%;
+       grid-area: ap;
+    }
+
+    #map2{
+        display: none;
     }
 
     #title_ski{
@@ -620,6 +771,7 @@ body::-webkit-scrollbar{
         font-size: 70px;
         font-family: times;
     }
+
 }
 
 
