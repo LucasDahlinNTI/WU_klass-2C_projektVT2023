@@ -993,10 +993,11 @@ body::-webkit-scrollbar{
 
     #mannen{
         grid-area: nn;
-        background-image: url("../img/Stek.jpg");
+        background-image: url("../img/karsten-winegeart-cZVE4GpzQLM-unsplash.jpg");
         height: 400px;
         width: auto;
         background-size: cover;
+        background-position-x: -50px;
     }
 
     #viktig_info{
