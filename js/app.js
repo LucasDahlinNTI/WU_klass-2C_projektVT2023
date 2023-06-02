@@ -43,5 +43,5 @@ function updateClock() {
 
   window.onload = function() {
     var randomNumber = Math.floor(Math.random() * 101);
-    document.getElementById("availability").textContent = "Antal boenden tillgängliga: " + randomNumber;
+    document.getElementById("availability").textContent = "Antal Boenden Tillgängliga: " + randomNumber;
   };

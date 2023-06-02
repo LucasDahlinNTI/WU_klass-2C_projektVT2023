@@ -6,7 +6,7 @@
     font-size: xx-large;  
 }
 
- @media screen and (max-width: 950px){
+ @media screen and (max-width: 1000px){
 
     #grid_wrapper {
         display: grid;
@@ -31,21 +31,32 @@
         display: none;
     }
 
+    #text_header2{
+        position: absolute;
+        color: black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: oblique;
+        top: 100px;
+        right: 220px;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
     #språk{
         position: absolute;
-        height: 40px;
+        height: 60px;
         width: auto;
         z-index: +1;
-        padding-left: 250px;
-        margin-top: 150px;
+        top: 80px;
+        right: 140px;
     }
 
     #sök{
         position: absolute;
-        height: 40px;
+        height: 60px;
         width: auto;
-        margin-top: 150px;
-        padding-left: 300px;
+        top: 80px;
+        right: 50px;
         z-index: +1;
     }
 
@@ -82,7 +93,8 @@
 
     #main_start {
         background-image: url("../img/ski_bak.jpg");
-        background-position: -1050px;
+        background-size: cover;
+        background-position: -900px;
         grid-template-areas: 
         "bo"
         "c2";
@@ -103,32 +115,40 @@
         rotate: -90deg;
         position: absolute;
         font-size: small;
-        margin-top: 600px;
-        margin-left: 100px;
-        padding-top: 300px;
+        top: 900px;
+        right: -90px;
         color: black;  
     }
 
     
     #clockSection {
         position: absolute;
-        margin-top: 50px;
+        top: 200px;
       }
       
       #clock {
         font-size: 48px;
         text-align: center;
         padding: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
 
     #nyheter{
-        position: absolute;
-        margin-top: 620px;
-        padding-left: 770px;
-        font-size: 10px;
+        position: relative;
+        top: 700px;
+        left: 0px;
+        font-size: 20px;
         border-style: solid;
         border-color: transparent;
         border-top-color: black;
+        text-align: center;
+        background-color: rgb(255, 255, 255, 0.5);
+    }
+
+    #nyheter_strong{
+        font-size: 50px;
+        text-decoration: underline;
+        font-family: Helvetica, sans-serif;
     }
 
     #youtube{
@@ -228,14 +248,16 @@
     }
 
     #availabilitySection {
-        position: absolute;
+        position: relative;
         text-align: center;
-        margin-top: 1020px;
-        margin-left: 18px;
+        bottom: 30px;
+        left: 790px;
         padding: 5px;
         border-style: solid;
         background-color: white;
         border-radius: 5px;
+        width: 340px;
+        height: 40px;
     }
       
       #availability {
@@ -304,13 +326,15 @@
     }
 
     #levelSection {
-        position: absolute;
+        position: relative;
         text-align: center;
         padding: 20px;
         background-color: #f0f0f0;
-        margin-top: 840px;
-        margin-left: 145px;
         border-style: solid;
+        height: 70px;
+        width: 130px;
+        left: 890px;
+        bottom: 85px;
       }
       
       #level {
@@ -320,9 +344,15 @@
       }
 
       #lavin{
-        position: absolute;
-        margin-top: 800px;
-        margin-left: 55px;
+        position: relative;
+        bottom: 200px;
+        left: 0px;
+        text-align: center;
+      }
+
+      #lavin_strong{
+        font-family: helvetica ;
+        text-transform: uppercase;
       }
 
     #su{
@@ -478,7 +508,7 @@ body::-webkit-scrollbar{
 }
 
 
-@media screen and (min-width: 950px){
+@media screen and (min-width: 1000px){
 
     #grid_wrapper {
         display: grid;
@@ -500,11 +530,19 @@ body::-webkit-scrollbar{
 
     #text_header{
         color: black;
-        padding-left: 80px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-style: oblique;
         font-size: 40px;
-        margin-right: 140px;
+        height: 150px;
+        position: relative;
+        top: 5px;
+        z-index: +10;   
+    }
+
+
+
+    #text_header2{
+        display: none;
     }
 
     #språk {
@@ -640,16 +678,16 @@ body::-webkit-scrollbar{
 
     #text_container2{
         position: absolute;
-        margin-top: 1020px;
-        padding-left: 1300px;
+        top: 1200px;
+        right: 20px;
         font-size: 17px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     #nyheter{
         position: absolute;
-        margin-top: 398px;
-        padding-left: 200px;
+        top: 1008px;
+        left: 0;
         background-color: rgb(255, 255, 255, 0.5);
         border-top-right-radius: 10px;
         border-style: solid;
@@ -737,24 +775,28 @@ body::-webkit-scrollbar{
         grid-template-areas:
         "li li li" 
         "vi ho ca";
-        grid-template-columns: 400px 400px 400px;
+        grid-template-columns: 350px 350px 350px;
         grid-template-rows: 200px 400px;
+        margin-left: 48px;
+        margin-bottom: 200px;
     }
 
     #availabilitySection {
-        position: absolute;
+        position: relative;
         text-align: center;
-        margin-top: 1000px;
-        margin-left: 610px;
+        bottom: 100px;
+        width: 500px;
+        left: 700px;
     }
       
       #availability {
-        font-size: 24px;
+        font-size: 30px;
         font-weight: bold;
         background-color: white;
         padding: 10px;
         border-radius: 5px;
         border-style: solid;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     #village {
@@ -800,7 +842,7 @@ body::-webkit-scrollbar{
     .boende_text{
         position: relative;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        padding-top: 330px; 
+        padding-top: 275px; 
         font-weight: 800;
     }
 
@@ -809,6 +851,9 @@ body::-webkit-scrollbar{
         margin: 10px;
         border-radius: 30px;
         box-shadow: 5px 5px 9px -2px #333;
+        width: 80%;
+        height: 80%;
+        position: relative;
     }
 
     .h2_boende { 
@@ -845,21 +890,27 @@ body::-webkit-scrollbar{
         grid-template-rows: 300px 100px 200px 200px;
         background-color: rgb(255, 255, 255, 0.7);
         border-radius: 20px;
-        box-shadow:5px 5px 9px -2px #333 ;
+        border-style: solid;
+        position: absolute;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        left: -2px;
+        top: 350px;
+        border-left-color: transparent;
     }
 
     #levelSection {
         position: absolute;
         height: 100px;
-        width: 100px;
+        width: 60px;
         text-align: center;
         padding: 20px;
-        margin-left: 1270px;
+        right: 220px;
         z-index: +2;
       }
       
       #level {
-        font-size: 80px;
+        font-size: 70px;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -867,10 +918,10 @@ body::-webkit-scrollbar{
       #lavin{
         position: absolute;
         background-color: white;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
         padding-bottom: 300px;
-        margin-left: 1238px;
+        right: 0px;
         text-decoration: underline;
         border-style: solid;
         border-right-color: transparent;
@@ -964,6 +1015,8 @@ body::-webkit-scrollbar{
         border-radius: 5px;
         border: 2px solid black;
         z-index: +10;
+        position: relative;
+        right: 150px;
     }
 
     #instruktör{
@@ -972,9 +1025,9 @@ body::-webkit-scrollbar{
         grid-template-areas: 
         "in"
         "nn";
-        grid-template-columns: 400px;
-        grid-template-rows: 40px 400px;
-        margin-left:1200px ;
+        grid-template-columns: 270px;
+        grid-template-rows: 40px 270px;
+        right: 0px;
         border-style: solid;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -994,7 +1047,7 @@ body::-webkit-scrollbar{
     #mannen{
         grid-area: nn;
         background-image: url("../img/karsten-winegeart-cZVE4GpzQLM-unsplash.jpg");
-        height: 400px;
+        height: 270px;
         width: auto;
         background-size: cover;
         background-position-x: -50px;
