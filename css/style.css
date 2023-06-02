@@ -31,17 +31,6 @@
         display: none;
     }
 
-    #text_header2{
-        position: absolute;
-        color: black;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-style: oblique;
-        top: 100px;
-        right: 220px;
-        text-transform: uppercase;
-        font-size: 30px;
-    }
-
     #språk{
         position: absolute;
         height: 60px;
